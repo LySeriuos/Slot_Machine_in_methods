@@ -23,8 +23,7 @@ namespace The_slot_machine // Note: actual namespace depends on the project name
             {
                 try  // ask to tell more about this, copied code!
                 {
-                    Console.WriteLine("Add your amount of game money in USD $");
-                    playersGameMoney = int.Parse(Console.ReadLine()); // Converting input to int directly, because later it will be used only as int
+                    playersGameMoney = UI_methods.UserGameMoney("Add your amount of game money in USD $");
                 }
                 catch (Exception) // ask to tell more about this, copied code!
                 {

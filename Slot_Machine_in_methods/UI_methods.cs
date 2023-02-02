@@ -18,5 +18,12 @@
                 "4. Diagonals.");
             Console.WriteLine("Good luck!");
         }
+        public static int UserGameMoney(string question)
+        {
+            Console.WriteLine(question);
+            string PlayersInput = Console.ReadLine();
+            int result = Int32.Parse(PlayersInput);
+            return result;
+        }
     }
 }
