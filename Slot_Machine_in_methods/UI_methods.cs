@@ -1,1 +1,22 @@
-﻿
+﻿namespace Slot_Machine_in_methods
+{
+    public static class UI_methods
+    {
+        public static void DisplayingRoolsForUser()
+        {
+            Console.WriteLine("Welcome to the slot mashine");
+            Console.WriteLine();
+            Console.WriteLine("The rools to the game:");
+            Console.WriteLine("1. Add your game money amount in $ USD");
+            Console.WriteLine("2. Choose how many lines you would like to play.");
+            Console.WriteLine("3. One line cost 1$ per game");
+            Console.WriteLine("4. More lines yyou choosee more chance to win!");
+            Console.WriteLine("5. Options to choose for the lines:  \n\t" +
+                "1. Center Line.\n\t" +
+                "2. All horizontal lines.\n\t" +
+                "3. All vertical lines.\n\t" +
+                "4. Diagonals.");
+            Console.WriteLine("Good luck!");
+        }
+    }
+}

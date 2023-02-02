@@ -1,4 +1,6 @@
-﻿namespace The_slot_machine // Note: actual namespace depends on the project name.
+﻿using Slot_Machine_in_methods;
+
+namespace The_slot_machine // Note: actual namespace depends on the project name.
 {
     internal class Program
     {
@@ -7,13 +9,8 @@
             // Plan for the slot machine code:
             // 1. Instructions for game play.
 
-            Console.WriteLine("Welcome to the slot mashine");
-            Console.WriteLine("The rools to the game:");
-            Console.WriteLine("1. Add your game money amount in $ USD");
-            Console.WriteLine("2. Choose how many lines you would like to play.");
-            Console.WriteLine("3. One line cost 1$ per game");
-            Console.WriteLine("4. More lines yyou choosee more chance to win!");
-            Console.WriteLine("5. Options to choose for the lines:  \n\t1. Center Line.\n\t2. All horizontal lines.\n\t3. All vertical lines.\n\t4. Diagonals.");
+
+            UI_methods.DisplayingRoolsForUser();
 
             // 2. Choose option for bidding (player adds amount to play $). 
 

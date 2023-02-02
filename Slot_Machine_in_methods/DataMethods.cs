@@ -8,9 +8,9 @@ namespace Slot_Machine_in_methods
 {
     public class DataMethods
     {
-        public static int[,] GenerateGrid()
-        {
+        //public static int[,] GenerateGrid()
+        //{
 
-        }
+        //}
     }
 }
