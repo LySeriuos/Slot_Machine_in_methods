@@ -6,7 +6,11 @@ using System.Threading.Tasks;
 
 namespace Slot_Machine_in_methods
 {
-    public class data_methods
+    public class DataMethods
     {
+        public static int[,] GenerateGrid()
+        {
+
+        }
     }
 }
