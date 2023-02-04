@@ -116,6 +116,7 @@ namespace The_slot_machine // Note: actual namespace depends on the project name
                     Console.WriteLine(); // empty line
 
                     int winAmount = 0;
+                    int sumWinLoses = 0;
 
                     if (playersChoseOptionToPLay == 1 && playersGameMoney > 0) // player chose 1st option and player must have 1 dollar to play this line
                     {
@@ -183,8 +184,15 @@ namespace The_slot_machine // Note: actual namespace depends on the project name
                             winAmount -= 2;
                         }
                     }
+                    Console.WriteLine(winAmount);
+                    UI_methods.InformUserAboutWinAndLoses(winAmount);
 
-                    UI_methods.CheckTheBalance(winAmount, playersGameMoney);
+                    playersGameMoney =  UI_methods.SumUpWinsAndLoses(winAmount, playersGameMoney);
+
+                    UI_methods.PrintTheBalance(playersGameMoney);
+
+
+
                 }
 
             }

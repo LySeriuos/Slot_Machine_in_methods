@@ -42,22 +42,32 @@
                 return true;
             }
             return false;
-        }       
+        }
 
-        public static void CheckTheBalance(int num1, int num2)
+        public static void InformUserAboutWinAndLoses(int num1)
         {
             if (num1 < 1)
             {
                 Console.WriteLine("You lost! Try again!");
+                
             }
             else
             {
                 Console.WriteLine($"You won {num1} dollars");
             }
+        }
 
-            num2 = num2 + num1;
-            Console.WriteLine();
+        public static int SumUpWinsAndLoses(int num1, int num2)
+        {
+            int num3 = num1 + num2;
+            return num3;
+        }
+
+        public static void PrintTheBalance(int num2)
+        {
             Console.WriteLine($"Your acount balance now is: {num2} dollars");
+            return;
         }
     }
 }
+
