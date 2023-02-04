@@ -48,25 +48,10 @@ namespace The_slot_machine // Note: actual namespace depends on the project name
                         continue;
                     }
 
-                    if (playersChoseOptionToPLay == 1 && playersGameMoney < 1 ||
-                        playersChoseOptionToPLay == 2 && playersGameMoney < 3 ||
-                        playersChoseOptionToPLay == 3 && playersGameMoney < 3 ||
-                        playersChoseOptionToPLay == 4 && playersGameMoney < 2)
+                    bool result = UI_methods.CheckIfPlayerHasMoney(playersChoseOptionToPLay, playersGameMoney);
+                    if (result)
                     {
-                        break;
-                    }
-
-                    else
-                    {
-                        if (playersChoseOptionToPLay > 4)
-                        {
-                            Console.WriteLine($"There is no Option with number {playersChoseOptionToPLay}");
-                            continue;
-                        }
-                        else
-                        {
-                            Console.WriteLine("Your current balance is too low! Choose another option!");
-                        }
+                        continue;
                     }
 
                     Random randomNumbersGenerator = new Random(); // random numbers function

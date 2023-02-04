@@ -25,5 +25,23 @@
             int result = Int32.Parse(PlayersInput);
             return result;
         }
+
+        public static bool CheckIfPlayerHasMoney(int num1, int num2)
+        {
+            if (num1 == 1 && num2 < 1 ||
+                num1 == 2 && num2 < 3 ||
+                num1 == 3 && num2 < 3 ||
+                num1 == 4 && num2 < 2)
+            {
+                Console.WriteLine("Your current balance is too low! Choose another option!");
+                return true;
+            }
+            if (num1 > 4)
+            {
+                Console.WriteLine($"There is no Option with number {num1}");
+                return true;
+            }
+            return false;
+        }
     }
 }
