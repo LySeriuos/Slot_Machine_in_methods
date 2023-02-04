@@ -48,9 +48,15 @@ namespace The_slot_machine // Note: actual namespace depends on the project name
                         continue;
                     }
 
-                    bool result = UI_methods.CheckIfPlayerHasMoney(playersChoseOptionToPLay, playersGameMoney);
-                    if (result)
+                    bool hasNoMoney = UI_methods.CheckIfPlayerHasMoney(playersChoseOptionToPLay, playersGameMoney);
+                    if (hasNoMoney)
                     {
+                        UI_methods.PrintUserMoneyBalanceTooLow();
+                        continue;
+                    }
+                    else if (UI_methods.CheckIfChosedOptionHigherThanFour(playersChoseOptionToPLay))
+                    {
+                        UI_methods.InformUserAboutWrongOption(playersChoseOptionToPLay);
                         continue;
                     }
 
@@ -116,7 +122,6 @@ namespace The_slot_machine // Note: actual namespace depends on the project name
                     Console.WriteLine(); // empty line
 
                     int winAmount = 0;
-                    int sumWinLoses = 0;
 
                     if (playersChoseOptionToPLay == 1 && playersGameMoney > 0) // player chose 1st option and player must have 1 dollar to play this line
                     {
@@ -190,9 +195,6 @@ namespace The_slot_machine // Note: actual namespace depends on the project name
                     playersGameMoney =  UI_methods.SumUpWinsAndLoses(winAmount, playersGameMoney);
 
                     UI_methods.PrintTheBalance(playersGameMoney);
-
-
-
                 }
 
             }

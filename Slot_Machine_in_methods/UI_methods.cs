@@ -32,16 +32,29 @@
                 num1 == 2 && num2 < 3 ||
                 num1 == 3 && num2 < 3 ||
                 num1 == 4 && num2 < 2)
-            {
-                Console.WriteLine("Your current balance is too low! Choose another option!");
+            {               
                 return true;
-            }
+            }            
+            return false;
+        }
+
+        public static bool CheckIfChosedOptionHigherThanFour(int num1)
+        {
             if (num1 > 4)
             {
-                Console.WriteLine($"There is no Option with number {num1}");
                 return true;
             }
             return false;
+        }
+
+        public static void InformUserAboutWrongOption(int num1)
+        {
+            Console.WriteLine($"There is no Option with number {num1}");
+        }
+
+        public static void PrintUserMoneyBalanceTooLow()
+        {
+            Console.WriteLine("Your current balance is too low! Choose another option!");
         }
 
         public static void InformUserAboutWinAndLoses(int num1)
