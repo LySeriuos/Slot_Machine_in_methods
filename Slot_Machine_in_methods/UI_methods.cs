@@ -42,6 +42,22 @@
                 return true;
             }
             return false;
+        }       
+
+        public static void CheckTheBalance(int num1, int num2)
+        {
+            if (num1 < 1)
+            {
+                Console.WriteLine("You lost! Try again!");
+            }
+            else
+            {
+                Console.WriteLine($"You won {num1} dollars");
+            }
+
+            num2 = num2 + num1;
+            Console.WriteLine();
+            Console.WriteLine($"Your acount balance now is: {num2} dollars");
         }
     }
 }

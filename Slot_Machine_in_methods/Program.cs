@@ -184,20 +184,7 @@ namespace The_slot_machine // Note: actual namespace depends on the project name
                         }
                     }
 
-                    if (winAmount < 1)
-                    {
-                        Console.WriteLine("You lost! Try again!");
-                    }
-                    else
-                    {
-                        Console.WriteLine($"You won {winAmount} dollars");
-                    }
-
-                    // all the repeated code
-
-                    playersGameMoney = playersGameMoney + winAmount;
-                    Console.WriteLine();
-                    Console.WriteLine($"Your acount balance now is: {playersGameMoney} dollars");
+                    UI_methods.CheckTheBalance(winAmount, playersGameMoney);
                 }
 
             }
