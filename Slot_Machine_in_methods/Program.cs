@@ -9,7 +9,6 @@ namespace The_slot_machine // Note: actual namespace depends on the project name
             // Plan for the slot machine code:
             // 1. Instructions for game play.
 
-
             UI_methods.DisplayingRoolsForUser();
 
             // 2. Choose option for bidding (player adds amount to play $). 
@@ -39,6 +38,10 @@ namespace The_slot_machine // Note: actual namespace depends on the project name
                         continue;
                     }
 
+
+
+                    // 4. Create and output Random Numbers machine (slot machine).
+
                     Random randomNumbersGenerator = new Random(); // random numbers function
                     int[,] array2Dimmensional = new int[3, 3];  // columns and lines of the grid
 
@@ -50,20 +53,9 @@ namespace The_slot_machine // Note: actual namespace depends on the project name
                         }
                     }
 
-                    // 4. Create and output Random Numbers machine (slot machine).
-
                     Console.WriteLine();
 
-                    for (int rows = 0; rows < array2Dimmensional.GetLength(0); rows++) // getting the length of rows and columns from array2Dimmensional = new int[3, 3];
-                                                                                       // GetLength(0) means first number in 2 dimensional array like in here is "3"
-                                                                                       // GetLength(1) means second number in 2 dimensional array like in here is "3"
-                    {
-                        for (int columns = 0; columns < array2Dimmensional.GetLength(1); columns++)
-                        {
-                            Console.Write($" {array2Dimmensional[rows, columns]}"); // printing out the grid 
-                        }
-                        Console.WriteLine(); // empty place
-                    }
+                    UI_methods.Print2DArray(array2Dimmensional);
 
 
                     // 5. Create if statements to see if he wants to play combination of (vertical lines, horizontal lines, only center line, two horizontal lines...)
@@ -169,7 +161,6 @@ namespace The_slot_machine // Note: actual namespace depends on the project name
                         }
                     }
                     
-                    Console.WriteLine(winAmount);
                     UI_methods.InformUserAboutWinAndLoses(winAmount);
 
                     playersGameMoney =  UI_methods.SumUpWinsAndLoses(winAmount, playersGameMoney);

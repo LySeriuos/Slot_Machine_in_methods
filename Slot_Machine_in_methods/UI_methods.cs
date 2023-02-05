@@ -33,14 +33,43 @@
                 {
                     Console.WriteLine("That wasn't a number.");
                     continue;
-                }                
+                }
             }
-            
+
+        }
+
+        //public static int[,] CreateArrayWithRandomNumbers(int array2Dimmensional)
+        //{
+        //    Random randomNumbersGenerator = new Random(); // random numbers function
+        //    int[,] array2Dimmensional = new int[3, 3];  // columns and lines of the grid
+
+        //    for (int rows = 0; rows < 3; rows++) //populating 2D Array. for every row for loop is adding three columns and random numbers to it
+        //    {
+        //        for (int columns = 0; columns < 3; columns++)
+        //        {
+        //            array2Dimmensional[rows, columns] = randomNumbersGenerator.Next(0, 10); // attributing random numbers to every row and column. 10 is not including
+        //            return array2Dimmensional;
+        //        }
+        //    }
+        //}
+
+        public static void Print2DArray(int[,] array2Dimmensional)
+        {
+            for (int rows = 0; rows < array2Dimmensional.GetLength(0); rows++) // getting the length of rows and columns from array2Dimmensional = new int[3, 3];
+                                                                               // GetLength(0) means first number in 2 dimensional array like in here is "3"
+                                                                               // GetLength(1) means second number in 2 dimensional array like in here is "3"
+            {
+                for (int columns = 0; columns < array2Dimmensional.GetLength(1); columns++)
+                {
+                    Console.Write($" {array2Dimmensional[rows, columns]}"); // printing out the grid 
+                }
+                Console.WriteLine(); // empty place
+            }
         }
 
         public static int UsersChosedOption()
         {
-            while(true)
+            while (true)
             {
                 try  // ask to tel more about this, copied code!
                 {
@@ -64,9 +93,9 @@
                 num1 == 2 && num2 < 3 ||
                 num1 == 3 && num2 < 3 ||
                 num1 == 4 && num2 < 2)
-            {               
+            {
                 return true;
-            }            
+            }
             return false;
         }
 
@@ -94,13 +123,15 @@
             if (num1 < 1)
             {
                 Console.WriteLine("You lost! Try again!");
-                
+
             }
             else
             {
                 Console.WriteLine($"You won {num1} dollars");
             }
         }
+
+     
 
         public static int SumUpWinsAndLoses(int num1, int num2)
         {
