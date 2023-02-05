@@ -246,6 +246,16 @@
             Console.WriteLine($"Your acount balance now is: {num2} dollars");
             return;
         }
+
+        public static void YouLostMessage()
+        {
+            Console.WriteLine("You lost! Try again!");
+        }
+
+        public static void YouWonMoneyMessage(int countedWinsLoses)
+        {
+            Console.WriteLine($"You won {countedWinsLoses} dollars");
+        }
     }
 }
 

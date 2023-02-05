@@ -46,7 +46,6 @@ namespace The_slot_machine // Note: actual namespace depends on the project name
 
                     UI_methods.Print2DArray(array2Dimmensional);
 
-
                     // 4. Create if statements to see if he wants to play combination of (vertical lines, horizontal lines, only center line, two horizontal lines...)
                     // variables for booleans and positions of each object in the grid
 
@@ -54,12 +53,11 @@ namespace The_slot_machine // Note: actual namespace depends on the project name
 
                     if (winAmount < 1)
                     {
-                        Console.WriteLine("You lost! Try again!");
-
+                        UI_methods.YouLostMessage();
                     }
                     else
                     {
-                        Console.WriteLine($"You won {winAmount} dollars");
+                        UI_methods.YouWonMoneyMessage(winAmount);
                     }
 
                     playersGameMoney += winAmount; // adding wins or extracting loses from the main game money balance
