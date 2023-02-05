@@ -26,8 +26,8 @@
                 try  // ask to tell more about this, copied code!
                 {
                     Console.WriteLine("Add your amount of game money in USD $");
-                    int num1 = int.Parse(Console.ReadLine()); // Converting input to int directly, because later it will be used only as int
-                    return num1;
+                    int playersGameMoney = int.Parse(Console.ReadLine()); // Converting input to int directly, because later it will be used only as int
+                    return playersGameMoney;
                 }
                 catch (Exception) // ask to tell more about this, copied code!
                 {
@@ -36,6 +36,26 @@
                 }                
             }
             
+        }
+
+        public static int UsersChosedOption()
+        {
+            while(true)
+            {
+                try  // ask to tel more about this, copied code!
+                {
+                    Console.WriteLine("Choose how many lines you will play by typing in number of the menu");
+                    Console.WriteLine("\n\t1 - Center Line. One turn 1$\n\t2 - All horizontal lines. One turn 3$\n\t3 - All vertical lines. One turn 3$\n\t4 - Diagonals. One turn 2$");
+
+                    int playersChoseOptionToPLay = int.Parse(Console.ReadLine()); // Converting input to int directly, because later it will be used only as int
+                    return playersChoseOptionToPLay;                                                         // add while loop until the player has money                                                                             
+                }
+                catch (Exception) // ask to tel more about this, copied code!
+                {
+                    Console.WriteLine("That wasn't a number.");
+                    continue;
+                }
+            }
         }
 
         public static bool CheckIfPlayerHasMoney(int num1, int num2)

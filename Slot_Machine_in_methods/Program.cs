@@ -25,20 +25,7 @@ namespace The_slot_machine // Note: actual namespace depends on the project name
 
                 while (playersGameMoney > 0 && playersGameMoney < 101)
                 {
-                    try  // ask to tel more about this, copied code!
-                    {
-                        Console.WriteLine("Choose how many lines you will play by typing in number of the menu");
-                        Console.WriteLine("\n\t1 - Center Line. One turn 1$\n\t2 - All horizontal lines. One turn 3$\n\t3 - All vertical lines. One turn 3$\n\t4 - Diagonals. One turn 2$");
-
-                        playersChoseOptionToPLay = int.Parse(Console.ReadLine()); // Converting input to int directly, because later it will be used only as int
-                                                                                  // add while loop until the player has money
-                                                                                  // 3. Create 2D array for random numbers.
-                    }
-                    catch (Exception) // ask to tel more about this, copied code!
-                    {
-                        Console.WriteLine("That wasn't a number.");
-                        continue;
-                    }
+                    playersChoseOptionToPLay = UI_methods.UsersChosedOption();
 
                     bool hasNoMoney = UI_methods.CheckIfPlayerHasMoney(playersChoseOptionToPLay, playersGameMoney);
                     if (hasNoMoney)
