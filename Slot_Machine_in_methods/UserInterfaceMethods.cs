@@ -67,19 +67,6 @@
             Console.WriteLine("Your current balance is too low! Choose another option!");
         }
 
-        public static void InformUserAboutWinAndLoses(int num1)
-        {
-            if (num1 < 1)
-            {
-                Console.WriteLine("You lost! Try again!");
-
-            }
-            else
-            {
-                Console.WriteLine($"You won {num1} dollars");
-            }
-        }
-
         public static void PrintTheBalance(int num2)
         {
             Console.WriteLine($"Your acount balance now is: {num2} dollars");
