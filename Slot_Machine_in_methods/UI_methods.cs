@@ -162,8 +162,6 @@
 
             // IF statements for every option
 
-            Console.WriteLine(); // empty line
-
             int winAmount = 0;
 
             if (playersChoseOptionToPLay == 1 && playersGameMoney > 0) // player chose 1st option and player must have 1 dollar to play this line
