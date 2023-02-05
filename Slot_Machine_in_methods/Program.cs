@@ -10,6 +10,7 @@ namespace The_slot_machine // Note: actual namespace depends on the project name
             // 1. Instructions for game play.
 
             UI_methods.DisplayingRoolsForUser();
+            Console.WriteLine();
 
             // 2. Choose option for bidding (player adds amount to play $). 
 
@@ -21,6 +22,7 @@ namespace The_slot_machine // Note: actual namespace depends on the project name
             while (true)
             {
                 playersGameMoney = UI_methods.UsersGameMoneyFromInput();
+                Console.WriteLine();
 
                 while (playersGameMoney > 0 && playersGameMoney < 101)
                 {
@@ -50,6 +52,7 @@ namespace The_slot_machine // Note: actual namespace depends on the project name
                     // variables for booleans and positions of each object in the grid
 
                     int winAmount = UI_methods.CoutnWinAndLoses(array2Dimmensional, playersChoseOptionToPLay, playersGameMoney);
+                    Console.WriteLine();
 
                     if (winAmount < 1)
                     {
