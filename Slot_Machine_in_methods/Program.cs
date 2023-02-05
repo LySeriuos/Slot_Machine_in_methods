@@ -71,7 +71,7 @@ namespace The_slot_machine // Note: actual namespace depends on the project name
                         Console.WriteLine($"You won {winAmount} dollars");
                     }
 
-                    playersGameMoney += winAmount;// UI_methods.SumUpWinsAndLoses(winAmount, playersGameMoney);
+                    playersGameMoney += winAmount; // adding wins or extracting loses from the main game money balance
 
                     UI_methods.PrintTheBalance(playersGameMoney);
                 }
