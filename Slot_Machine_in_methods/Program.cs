@@ -21,15 +21,7 @@ namespace The_slot_machine // Note: actual namespace depends on the project name
             // looping until user's input is 0. 
             while (true)
             {
-                try  // ask to tell more about this, copied code!
-                {
-                    playersGameMoney = UI_methods.UserGameMoney("Add your amount of game money in USD $");
-                }
-                catch (Exception) // ask to tell more about this, copied code!
-                {
-                    Console.WriteLine("That wasn't a number.");
-                    continue;
-                }
+                playersGameMoney = UI_methods.UsersGameMoneyFromInput();
 
                 while (playersGameMoney > 0 && playersGameMoney < 101)
                 {
@@ -189,6 +181,7 @@ namespace The_slot_machine // Note: actual namespace depends on the project name
                             winAmount -= 2;
                         }
                     }
+                    
                     Console.WriteLine(winAmount);
                     UI_methods.InformUserAboutWinAndLoses(winAmount);
 

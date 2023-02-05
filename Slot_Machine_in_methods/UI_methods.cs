@@ -18,12 +18,24 @@
                 "4. Diagonals.");
             Console.WriteLine("Good luck!");
         }
-        public static int UserGameMoney(string question)
+
+        public static int UsersGameMoneyFromInput()
         {
-            Console.WriteLine(question);
-            string PlayersInput = Console.ReadLine();
-            int result = Int32.Parse(PlayersInput);
-            return result;
+            while (true)
+            {
+                try  // ask to tell more about this, copied code!
+                {
+                    Console.WriteLine("Add your amount of game money in USD $");
+                    int num1 = int.Parse(Console.ReadLine()); // Converting input to int directly, because later it will be used only as int
+                    return num1;
+                }
+                catch (Exception) // ask to tell more about this, copied code!
+                {
+                    Console.WriteLine("That wasn't a number.");
+                    continue;
+                }                
+            }
+            
         }
 
         public static bool CheckIfPlayerHasMoney(int num1, int num2)
