@@ -38,9 +38,7 @@ namespace The_slot_machine // Note: actual namespace depends on the project name
                         continue;
                     }
 
-
-
-                    // 4. Create and output Random Numbers machine (slot machine).
+                    // 3. Create and output Random Numbers machine (slot machine).
 
                     Random randomNumbersGenerator = new Random(); // random numbers function
                     int[,] array2Dimmensional = new int[3, 3];  // columns and lines of the grid
@@ -58,14 +56,22 @@ namespace The_slot_machine // Note: actual namespace depends on the project name
                     UI_methods.Print2DArray(array2Dimmensional);
 
 
-                    // 5. Create if statements to see if he wants to play combination of (vertical lines, horizontal lines, only center line, two horizontal lines...)
+                    // 4. Create if statements to see if he wants to play combination of (vertical lines, horizontal lines, only center line, two horizontal lines...)
                     // variables for booleans and positions of each object in the grid
 
                     int winAmount = UI_methods.CoutnWinAndLoses(array2Dimmensional, playersChoseOptionToPLay, playersGameMoney);
 
-                    UI_methods.InformUserAboutWinAndLoses(winAmount);
+                    if (winAmount < 1)
+                    {
+                        Console.WriteLine("You lost! Try again!");
 
-                    playersGameMoney =  UI_methods.SumUpWinsAndLoses(winAmount, playersGameMoney);
+                    }
+                    else
+                    {
+                        Console.WriteLine($"You won {winAmount} dollars");
+                    }
+
+                    playersGameMoney += winAmount;// UI_methods.SumUpWinsAndLoses(winAmount, playersGameMoney);
 
                     UI_methods.PrintTheBalance(playersGameMoney);
                 }

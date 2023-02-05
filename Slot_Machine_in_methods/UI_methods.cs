@@ -38,20 +38,20 @@
 
         }
 
-        //public static int[,] CreateArrayWithRandomNumbers(int array2Dimmensional)
-        //{
-        //    Random randomNumbersGenerator = new Random(); // random numbers function
-        //    int[,] array2Dimmensional = new int[3, 3];  // columns and lines of the grid
+        public static int[,] CreateArrayWithRandomNumbers()
+        {
+            Random randomNumbersGenerator = new Random(); // random numbers function
+            int[,] array2Dimmensional = new int[3, 3];  // columns and lines of the grid
 
-        //    for (int rows = 0; rows < 3; rows++) //populating 2D Array. for every row for loop is adding three columns and random numbers to it
-        //    {
-        //        for (int columns = 0; columns < 3; columns++)
-        //        {
-        //            array2Dimmensional[rows, columns] = randomNumbersGenerator.Next(0, 10); // attributing random numbers to every row and column. 10 is not including
-        //            return array2Dimmensional;
-        //        }
-        //    }
-        //}
+            for (int rows = 0; rows < 3; rows++) //populating 2D Array. for every row for loop is adding three columns and random numbers to it
+            {
+                for (int columns = 0; columns < 3; columns++)
+                {
+                    array2Dimmensional[rows, columns] = randomNumbersGenerator.Next(0, 10); // attributing random numbers to every row and column. 10 is not including
+                }
+            }
+            return array2Dimmensional;
+        }
 
         public static void Print2DArray(int[,] array2Dimmensional)
         {
@@ -73,7 +73,7 @@
             {
                 try  // ask to tel more about this, copied code!
                 {
-                    Console.WriteLine("Choose how many lines you will play by typing in number of the menu");
+                    Console.WriteLine("Choose how many lines you will play by typing in number of the menu:");
                     Console.WriteLine("\n\t1 - Center Line. One turn 1$\n\t2 - All horizontal lines. One turn 3$\n\t3 - All vertical lines. One turn 3$\n\t4 - Diagonals. One turn 2$");
 
                     int playersChoseOptionToPLay = int.Parse(Console.ReadLine()); // Converting input to int directly, because later it will be used only as int
