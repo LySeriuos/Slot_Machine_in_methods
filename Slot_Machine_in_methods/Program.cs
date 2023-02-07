@@ -37,8 +37,10 @@ namespace The_slot_machine // Note: actual namespace depends on the project name
                     else if (playersChoseOptionToPLay > 4)
                     {
                         UserInterfaceMethods.InformUserAboutWrongOption(playersChoseOptionToPLay);
+                        Console.WriteLine();
                         continue;
                     }
+                    
 
                     // 3. Create and output Random Numbers machine (slot machine).
 
