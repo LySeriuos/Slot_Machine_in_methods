@@ -2,6 +2,10 @@
 {
     public class LogicMethods
     {
+        /// <summary>
+        /// Creating 2D array withj random numbers
+        /// </summary>
+        /// <returns>2D array</returns>
         public static int[,] CreateArrayWithRandomNumbers()
         {
             Random randomNumbersGenerator = new Random(); // random numbers function
@@ -17,6 +21,10 @@
             return array2Dimmensional;
         }
 
+        /// <summary>
+        /// Printing out 2D array
+        /// </summary>
+        /// <param name="array2Dimmensional">taking array2Dimmensional as input and printing out</param>
         public static void Print2DArray(int[,] array2Dimmensional)
         {
             for (int rows = 0; rows < array2Dimmensional.GetLength(0); rows++) // getting the length of rows and columns from array2Dimmensional = new int[3, 3];
@@ -30,6 +38,12 @@
                 Console.WriteLine(); // empty place
             }
         }
+        /// <summary>
+        /// Checking if user chosed option and gameMoney balance are valid to play
+        /// </summary>
+        /// <param name="num1">int playersChoseOptionToPLay as param</param>
+        /// <param name="num2">int playersGameMoney as param</param>
+        /// <returns></returns>
         public static bool CheckIfPlayerHasMoney(int num1, int num2)
         {
             if (num1 == 1 && num2 < 1 ||
@@ -41,7 +55,6 @@
             }
             return false;
         }
-
         public static bool CheckIfChosedOptionHigherThanFour(int num1)
         {
             if (num1 > 4)
@@ -50,6 +63,15 @@
             }
             return false;
         }
+        /// <summary>
+        /// 1. Getting random numbers in each 2D array position.
+        /// 2. Checking if there is equal numbers in rows or columns
+        /// 3. Adding winning amount to balance or taking away cost of game play
+        /// </summary>
+        /// <param name="array2Dimmensional">int array2Dimmensional as a param</param>
+        /// <param name="playersChoseOptionToPLay">int playersChoseOptionToPLay as param</param>
+        /// <param name="playersGameMoney">int playersGameMoney as param</param>
+        /// <returns> final win/loses balance as winAmount </returns>
         public static int CoutnWinAndLoses(int[,] array2Dimmensional, int playersChoseOptionToPLay, int playersGameMoney)
         {
             int fColFLine = array2Dimmensional[0, 0]; // getting numbers from 2D array 
