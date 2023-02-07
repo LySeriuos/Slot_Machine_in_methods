@@ -173,11 +173,5 @@
             }
             return winAmount;
         }
-
-        public static int SumUpWinsAndLoses(int num1, int num2)
-        {
-            int num3 = num1 + num2;
-            return num3;
-        }
     }
 }
