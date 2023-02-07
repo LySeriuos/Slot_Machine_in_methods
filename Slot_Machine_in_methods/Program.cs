@@ -34,7 +34,7 @@ namespace The_slot_machine // Note: actual namespace depends on the project name
                         UserInterfaceMethods.PrintUserMoneyBalanceTooLow();
                         continue;
                     }
-                    else if (LogicMethods.CheckIfChosedOptionHigherThanFour(playersChoseOptionToPLay))
+                    else if (playersChoseOptionToPLay > 4)
                     {
                         UserInterfaceMethods.InformUserAboutWrongOption(playersChoseOptionToPLay);
                         continue;

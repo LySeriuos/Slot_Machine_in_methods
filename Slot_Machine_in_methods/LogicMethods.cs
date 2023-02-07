@@ -55,14 +55,6 @@
             }
             return false;
         }
-        public static bool CheckIfChosedOptionHigherThanFour(int num1)
-        {
-            if (num1 > 4)
-            {
-                return true;
-            }
-            return false;
-        }
         /// <summary>
         /// 1. Getting random numbers in each 2D array position.
         /// 2. Checking if there is equal numbers in rows or columns
